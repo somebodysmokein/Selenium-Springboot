@@ -1,0 +1,35 @@
+selenium:
+  application:
+    name: TechnicalHandsOn
+    url: https://www.amazon.com
+    description: Test Web Applciation using BrowserStack
+  config:
+    chrome:
+        version: 79.0
+    browserstack:
+        browser: chrome
+        browser_version: latest
+        os: Windows
+        os_version: 10
+        build: browserstack-build-1
+        name: Test 1
+    environment: 
+        testenv: browserstack
+        
+      
+  users: 
+    local:
+      username: root
+      password: rootpass
+    browserstack:
+      username: guest
+      password: guestpass
+
+---
+application:
+  profiles:
+    - dev
+    - test
+    - prod
+    - 1
+    - 2
